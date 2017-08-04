@@ -70,16 +70,19 @@ $(document).ready(function() {
 
 		/*导航栏点击切换*/
 		$(".ladies").click(function() {
+			$(".top_bar").show();
 			$(".men,.prolist-cosmestic").hide();
 			$(".women,.aside").show();
 			$(this).find("a").addClass("cur").end().siblings("li").find("a").removeClass("cur")
 		})
 		$(".man").click(function() {
+			$(".top_bar").show();
 			$(".women,.prolist-cosmestic").hide();
 			$(".men,.aside").show()
 			$(this).find("a").addClass("cur").end().siblings("li").find("a").removeClass("cur")
 		})
 		$(".cosmestic").click(function() {
+			$(".top_bar").hide();
 			$(".women,.men,.aside").hide();
 			$(".prolist-cosmestic").show();
 			$(this).find("a").addClass("cur").end().siblings("li").find("a").removeClass("cur")
@@ -93,10 +96,10 @@ $(document).ready(function() {
 
 
 	/*引入美妆区导航栏*/
-	$(".cosmestic-nav").load("../html/common.html .prolist-cosmestic");
+	$(".cosmestic-nav").load("../html/common.html .cosmestic-nav");
 	
-	
-	
+	/*引入头部导航栏*/
+	$(".top_bar").load("../html/common.html .top_bar");
 	
 	/*动态生成页面数据*/
 
@@ -137,6 +140,43 @@ $(document).ready(function() {
 			$(".sliderBtns span").eq(0).stop().animate({ "left": "-30px" }, 300)
 			$(".sliderBtns span").eq(1).stop().animate({ "right": "-30px" }, 300)
 		})
+		
+		
+		//头部导航栏
+		$(window).scroll(function(){
+			var scrollTop=$(this).scrollTop()
+			if(scrollTop>500){
+				$(".top_bar").stop().animate({top:"0"},300)
+			}else{
+				$(".top_bar").stop().animate({top:"-40px"},30)
+			}
+		})
+		
+		
+		//引入下角固定页
+		$(".bottom-fixed").load("../html/common.html .bottom-fixed",function(){
+			$(".fixBtn").click(function(){
+				$('html,body').animate({scrollTop:0},1000); 
+			})
+		});
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

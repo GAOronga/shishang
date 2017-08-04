@@ -17,144 +17,10 @@
 
 .content {
     .prolist-cosmestic {
-
         display: none;
         .margin {
             width: 1100px;
             margin: 0 auto;
-        }
-        .cosmestic-nav {
-            display: none;
-            .margin {
-                width: 1100px;
-                margin: 0 auto;
-            }
-            .nav {
-                height: 52px;
-                position: relative;
-                dl {
-                    float: left;
-                    font: 16px/51px "";
-                    dt {
-                        padding: 0 18px;
-                        span {
-                            padding: 0 10px;
-                        }
-                    }
-                    dt:hover {
-                        color: #fff;
-                        text-decoration: underline;
-                        background: #FF0000;
-                        span {
-                            color: #fff;
-                        }
-                        a {
-                            color: #fff;
-                        }
-                    }
-                    dd {
-                        position: absolute;
-                        z-index: 1;
-                        top: 40px;
-                        left: 20px;
-                        display: none;
-                        ul.all {
-                            background: #fff;
-                            width: 1100px;
-                            border: 1px solid #cecece;
-                            height: 540px;
-                            li {
-                                float: left;
-                                width: 274px;
-                                border-right: 1px solid #cecece;
-                                height: 540px;
-                                h3 {
-                                    height: 40px;
-                                    background: #f2f2f2;
-                                    color: #000;
-                                    font: 18px/40px "";
-                                    padding-left: 20px;
-                                }
-                                p {
-                                    color: #000;
-                                    font: 16px/30px "";
-                                    padding-left: 20px;
-                                    background: #fff;
-                                    cursor: pointer;
-                                }
-                                .all-l {
-                                    margin-top: 20px;
-                                    i {
-                                        height: 40px;
-                                        color: #000;
-                                        font: 16px/30px "";
-                                        padding-left: 20px;
-                                        float: left;
-                                        width: 104px;
-                                        background: #fff;
-                                        cursor: pointer;
-                                    }
-                                    i:hover {
-                                        color: #99f;
-                                        text-decoration: underline;
-                                    }
-                                    ul {
-                                        float: left;
-                                        width: 150px;
-                                        li {
-                                            font: 14px/18px "";
-                                            color: #000;
-                                            width: 150px;
-                                            border: none;
-                                            cursor: pointer;
-                                            height: 18px;
-                                        }
-                                        li:hover {
-                                            color: #99f;
-                                            text-decoration: underline;
-                                        }
-                                    }
-                                }
-                            }
-                            li:last-child {
-                                border-right: none;
-                            }
-                        }
-
-                    }
-
-                }
-                dl:hover dd {
-                    display: block;
-                }
-                ul {
-                    font: 16px/52px "";
-                    float: left;
-                    li {
-                        float: left;
-                        a {
-                            height: 52px;
-                            display: block;
-                            color: #f11;
-                            padding: 0 18px;
-                            font: 700 16px/52px "";
-                        }
-                        a:hover {
-                            color: #fff;
-                            text-decoration: underline;
-                            background: #FF0000;
-                        }
-
-                    }
-                    li:first-child span {
-                        margin: 0 10px;
-                        font-size: 18px;
-                        color: #cecece;
-                    }
-                }
-
-            }
-
         }
         .screenBox {
             position: relative;
@@ -466,6 +332,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             li {
+                margin-bottom: 40px;
                 width: 240px;
                 a.pic {
                     display: block;
@@ -513,11 +380,12 @@ body.html {
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
     position: fixed;
     z-index: 1;
     display: none;
 }
+
 .login-page {
     height: 360px;
     width: 720px;
@@ -558,7 +426,6 @@ body.html {
             color: #fff;
         }
     }
-
     .login-code {
         margin: 10px 0 13px 94px;
         border: 1px solid #1fefef;
@@ -596,7 +463,6 @@ body.html {
             text-decoration: underline;
         }
     }
-
     .login-content {
         display: none;
         .login-attention {
@@ -670,11 +536,8 @@ body.html {
             a:first-child {
                 display: none;
             }
-
         }
-
     }
-
     .register-common {
         display: none;
         width: 522px;
@@ -836,5 +699,5 @@ body.html {
             }
         }
     }
-
 }
+
