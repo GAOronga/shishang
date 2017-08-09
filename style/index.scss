@@ -5,7 +5,6 @@
     src: url("//at.alicdn.com/t/font_dx3krsy5tcutmx6r.eot");
     src: url("//at.alicdn.com/t/font_dx3krsy5tcutmx6r.eot?#iefix") format('embedded-opentype'), url("//at.alicdn.com/t/font_dx3krsy5tcutmx6r.woff") format('woff'), url("//at.alicdn.com/t/font_dx3krsy5tcutmx6r.ttf") format('truetype'), url("//at.alicdn.com/t/font_dx3krsy5tcutmx6r.svg#iconfont") format('svg');
 }
-
 .iconfont {
     font-family: "iconfont" !important;
     font-size: 16px;
@@ -14,8 +13,13 @@
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.marginOuter {
+    width: 1260px;
+    margin: 0 auto;
+}
 .content {
+    width: 1260px;
+    margin: 0 auto;
     .prolist-cosmestic {
         display: none;
         .margin {
@@ -103,12 +107,15 @@
         }
         .cosmestic-list {
             margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             li {
                 width: 240px;
                 height: 350px;
                 border: 1px solid #e5e5e5;
                 padding: 20px 12px;
-                margin: 22px 12px 22px 0;
+                margin: 22px 0;
                 position: relative;
                 .cosmestic-list-pic {
                     overflow: hidden;
@@ -119,10 +126,12 @@
                         display: block;
                         width: 240px;
                         height: 240px;
+
                         img {
                             display: block;
                             height: 100%;
                             width: 100%;
+
                         }
                     }
                     a:hover {
@@ -208,7 +217,7 @@
         }
     }
     .production-list {
-        float: right;
+        float: left;
         border-left: 1px solid #e6e6e6;
         padding-left: 3px;
         .banb {
@@ -229,8 +238,9 @@
             float: left;
             ul.pro {
                 li {
+                    border: 1px solid #f99;
                     height: 330px;
-                    width: 240px;
+                    width: 239px;
                     float: left;
                     margin: 0 1px 1px 0;
                     a {
@@ -327,7 +337,7 @@
         .productlistt {
             border-bottom: 1px solid #E6E6E6;
             padding-bottom: 40px;
-            width: 1110px;
+            width: 1100px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -371,7 +381,7 @@
     }
 }
 
-body.html {
+body,html {
     height: 100%;
 }
 
@@ -513,6 +523,8 @@ body.html {
         input {
             float: left;
             margin: 8px;
+            height: 10px;
+            width: 10px;
         }
         span {
             float: left;
@@ -550,6 +562,7 @@ body.html {
                 color: #cecece;
                 padding-left: 10px;
                 width: 180px;
+                border: 1px solid #6A6A6A;
             }
             select {
                 height: 32px;
@@ -570,12 +583,20 @@ body.html {
             .eal {
                 width: 388px;
             }
+            .tel{
+                float: left;
+            }
             .nae,
             .psd,
             .tel {
                 margin-right: 10px;
             }
-            .regword1,
+            .regword1{
+                float: left;
+                height: 32px;
+                width: 80px;
+                margin: 0 10px;
+            }
             .regword2 {
                 height: 32px;
                 width: 60px;
@@ -584,6 +605,7 @@ body.html {
                 height: 10px;
                 width: 10px;
                 margin-top: 10px;
+                padding: 0;
             }
             span {
                 font: 10px/30px "";
@@ -642,6 +664,7 @@ body.html {
                 width: 360px;
             }
             input {
+                border: 1px solid #666;
                 padding-left: 10px;
                 font: 14px/32px "";
                 color: #cecece;
@@ -649,7 +672,9 @@ body.html {
             }
             .eal {
                 width: 500px;
-                margin-top: 10px;
+            }
+            .adress{
+                margin-top: 15px;
             }
             select {
                 height: 36px;
@@ -661,8 +686,17 @@ body.html {
                     color: #cecece;
                 }
             }
-            .regword1,
+            .tel{
+                float: left;
+            }
+            .regword1{
+                float: left;
+                height: 32px;
+                width: 100px;
+                margin: 0 10px;
+            }
             .regword2 {
+                float: left;
                 height: 32px;
                 width: 100px;
             }
@@ -670,13 +704,15 @@ body.html {
                 height: 10px;
                 width: 10px;
                 margin-top: 10px;
+                padding: 0;
             }
             span {
                 font: 10px/30px "";
                 color: #cecece;
             }
             em {
-                margin-left: 200px;
+                
+                margin-left: 180px;
                 cursor: pointer;
                 text-align: right;
                 text-decoration: underline;
@@ -700,4 +736,3 @@ body.html {
         }
     }
 }
-
