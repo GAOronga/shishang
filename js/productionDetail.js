@@ -1,7 +1,7 @@
 ﻿$(document).ready(function() {
 
 	//引入侧边栏
-	$(".right_bar").load("../html/common.html .right_bar", function() {
+	$(".right_bar").load("common.html .right_bar", function() {
 		var test = true;
 		$(".menu_btn").click(function() {
 			if(test) {
@@ -50,7 +50,7 @@
 
 	});
 
-	$("#header").load("../html/common.html #header", function() {
+	$("#header").load("common.html #header", function() {
 		/*登录注册*/
 		var flag = true;
 		init(".add_cart span"); //初始化购物车
@@ -147,15 +147,15 @@
 	})
 
 	/*引入侧边栏*/
-	$(".aside").load("../html/common.html .aside", function() {
-		$.get("../json/nav-title.json", function(data) {
+	$(".aside").load("common.html .aside", function() {
+		$.get("json/nav-title.json", function(data) {
 			var html = template("nav", data);
 			$(".partNav ul").html(html);
 
 			$(".partNav ul").on("mouseenter", "li", function() {
 				$(".nav_title_list").show();
 				var index = $(this).index();
-				$.get("../json/nava-title-data.json", function(data) {
+				$.get("json/nava-title-data.json", function(data) {
 					var html1 = template("navCon", data[index]);
 					$(".nav_title_list").html(html1);
 				})
@@ -177,14 +177,14 @@
 	});
 
 	/*引入尾部*/
-	$("#guarantee").load("../html/common.html #guarantee");
-	$(".bottom").load("../html/common.html .bottom");
+	$("#guarantee").load("common.html #guarantee");
+	$(".bottom").load("common.html .bottom");
 
 	/*引入头部导航栏*/
-	$(".top_bar").load("../html/common.html .top_bar");
+	$(".top_bar").load("common.html .top_bar");
 
 	/*引入下角固定页*/
-	$(".bottom-fixed").load("../html/common.html .bottom-fixed", function() {
+	$(".bottom-fixed").load("common.html .bottom-fixed", function() {
 		$(".fixBtn").click(function() {
 			$('html,body').animate({ scrollTop: 0 }, 1000);
 		})
@@ -205,7 +205,7 @@
 	// 分隔获取url中所传的关键字段值 (id)
 
 	var id = location.href.split("?")[1].split("=")[1];
-	$.get("../json/index.json", function(data) {
+	$.get("json/index.json", function(data) {
 		var item = matchId(data, id);
 		var html = template("detailData", item);
 		$(".productionDetail").html(html);

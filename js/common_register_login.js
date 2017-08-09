@@ -153,13 +153,13 @@ $(".regiter-btn strong").click(function() {
 		var psd = $(".psd").val();
 		$.ajax({
 			type: "POST",
-			url: "../json/common.php",
+			url: "json/common.php",
 			data: "username=" + name + "&password=" + psd + "&act=reg",
 			success: function(data) {
 				data = JSON.parse(data);
 				if(data.error == 0) {
 					alert("注册成功")
-					location.href = "../html/index.html";
+					location.href = "html/index.html";
 				} else if(data.error == 1) {
 					alert("用户名已存在")
 
@@ -179,7 +179,7 @@ $(".login-btn").find("input").click(function() {
 	var psd1 = $(".login-input").find("input:last-child").val();
 	$.ajax({
 		type: "POST",
-		url: "../json/common.php",
+		url: "json/common.php",
 		data: "username=" + name1 + "&password=" + psd1 + "&act=login",
 		success: function(data) {
 			var data = JSON.parse(data);

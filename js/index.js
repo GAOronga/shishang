@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	/*请求分离出去的头部尾部侧边栏*/
-	$(".aside").load("../html/common.html .aside", function() {
-		$.get("../json/nav-title.json", function(data) {
+	$(".aside").load("common.html .aside", function() {
+		$.get("json/nav-title.json", function(data) {
 			var html = template("nav", data);
 			$(".partNav ul").html(html);
 			
@@ -9,7 +9,7 @@ $(document).ready(function() {
 			$(".partNav ul").on("mouseenter", "li", function() {
 				$(".nav_title_list").show();
 				var index = $(this).index();
-				$.get("../json/nava-title-data.json", function(data) {
+				$.get("json/nava-title-data.json", function(data) {
 					var html1 = template("navCon", data[index]);
 					$(".nav_title_list").html(html1);
 				})
@@ -32,7 +32,7 @@ $(document).ready(function() {
 	});
 
 	//引入侧边栏
-	$(".right_bar").load("../html/common.html .right_bar", function() {
+	$(".right_bar").load("common.html .right_bar", function() {
 		var test = true;
 		$(".menu_btn").click(function() {
 			if(test) {
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
 	});
 
-	$("#header").load("../html/common.html #header", function() {
+	$("#header").load("common.html #header", function() {
 
 		/*登录注册*/
 		var flag = true;
@@ -178,17 +178,17 @@ $(document).ready(function() {
 	});
 
 	/*引入尾部*/
-	$("#guarantee").load("../html/common.html #guarantee");
-	$(".bottom").load("../html/common.html .bottom");
+	$("#guarantee").load("common.html #guarantee");
+	$(".bottom").load("common.html .bottom");
 
 	/*引入美妆区导航栏*/
-	$(".cosmestic-nav").load("../html/common.html .cosmestic-nav");
+	$(".cosmestic-nav").load("common.html .cosmestic-nav");
 
 	/*引入头部导航栏*/
-	$(".top_bar").load("../html/common.html .top_bar");
+	$(".top_bar").load("common.html .top_bar");
 
 	/*引入下角固定页*/
-	$(".bottom-fixed").load("../html/common.html .bottom-fixed", function() {
+	$(".bottom-fixed").load("common.html .bottom-fixed", function() {
 		$(".fixBtn").click(function() {
 			$('html,body').animate({ scrollTop: 0 }, 1000);
 		})
@@ -199,7 +199,7 @@ $(document).ready(function() {
 	$(window).load(function() {
 		$.ajax({
 			type: "GET",
-			url: "../json/index.json",
+			url: "json/index.json",
 			success: function(data) {
 				var html1 = html2 = html3 = html4 = html5 = html6 = html7 = "";
 				for(var i = 3; i < 6; i++) {
@@ -244,7 +244,7 @@ $(document).ready(function() {
 		})
 		$.ajax({
 			type: "get",
-			url: "../json/data.json",
+			url: "json/data.json",
 			success: function(data1) {
 				var htmll1 = htmll2 = htmll3 = htmll4 = "";
 				for(var i = 5; i < 10; i++) {
