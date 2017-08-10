@@ -178,14 +178,14 @@ $(function() {
 	});
 
 	/*引入尾部*/
-	$("#guarantee").load("../common.html #guarantee");
-	$(".bottom").load("../common.html .bottom");
+	$("#guarantee").load("common.html #guarantee");
+	$(".bottom").load("common.html .bottom");
 
 	/*引入头部导航栏*/
-	$(".top_bar").load("../common.html .top_bar");
+	$(".top_bar").load("common.html .top_bar");
 
 	/*引入下角固定页*/
-	$(".bottom-fixed").load("../common.html .bottom-fixed", function() {
+	$(".bottom-fixed").load("common.html .bottom-fixed", function() {
 		$(".fixBtn").click(function() {
 			$('html,body').animate({ scrollTop: 0 }, 1000);
 		})
@@ -204,7 +204,7 @@ $(function() {
 	})
 
 	//生成购物车数据
-	$.get("../json/index.json", function(data) {
+	$.get("json/index.json", function(data) {
 		//取cookie的值
 		var cartStr = $.cookie("cart")
 		cartStr = cartStr ? cartStr : "[]";
